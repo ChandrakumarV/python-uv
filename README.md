@@ -40,11 +40,14 @@ uv sync
 
 Execute the CLI entry point using `uv run`:
 
+<!-- package_name:function_name -->
+
 ```bash
 uv run python-uv
 ```
 
 Output:
+
 ```text
 --- Python UV Demo ---
 Hello, Alice!
@@ -66,7 +69,8 @@ python-uv/
 ├── uv.lock               # Deterministic dependency lockfile
 └── src/
     └── python_uv/
-        ├── __init__.py   # Application entry point
+        ├── __init__.py   # empty to tell it's package
+        ├── main.py       # Application entry point
         ├── calculator.py # Simple math functions and Calculator class
         └── person.py     # Simple greeting function and Person class
 ```
@@ -75,14 +79,14 @@ python-uv/
 
 ## 🧰 Useful `uv` Commands
 
-| Command | Description |
-| :--- | :--- |
-| `uv sync` | Synchronize the virtual environment with `uv.lock` |
-| `uv run <command>` | Run a command or script within the project environment |
-| `uv add <package>` | Add a dependency to `pyproject.toml` and update the lockfile |
-| `uv remove <package>` | Remove a dependency from the project |
-| `uv lock` | Regenerate or update the `uv.lock` lockfile |
-| `uv build` | Build wheel and source distributions |
+| Command               | Description                                                  |
+| :-------------------- | :----------------------------------------------------------- |
+| `uv sync`             | Synchronize the virtual environment with `uv.lock`           |
+| `uv run <command>`    | Run a command or script within the project environment       |
+| `uv add <package>`    | Add a dependency to `pyproject.toml` and update the lockfile |
+| `uv remove <package>` | Remove a dependency from the project                         |
+| `uv lock`             | Regenerate or update the `uv.lock` lockfile                  |
+| `uv build`            | Build wheel and source distributions                         |
 
 ---
 
